@@ -1,9 +1,11 @@
 <h2>Top Heroes</h2>
 <div class="heroes-menu">
-    <!-- heroesからそれぞれのheroのhero.id, hero.nameを取得-->
-    <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-        {{hero.name}}
+  <!-- heroesからそれぞれのheroのhero.id, hero.nameを取得-->
+  @for (hero of heroes; track hero) {
+    <a routerLink="/detail/{{hero.id}}">
+      {{hero.name}}
     </a>
+  }
 </div>
 
 <app-hero-search></app-hero-search>
